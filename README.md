@@ -111,6 +111,8 @@ The authentication service is implemented in **Go** and manages:
     - `409 Conflict`: User already exists.
     - `400 Bad Request`: Invalid input.
     - `500 Internal Server Error`: Registration failed.
+
+
     Example:
 
 ```
