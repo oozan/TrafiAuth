@@ -1,0 +1,81 @@
+<!-- backend2.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Backend Two!</title>
+    <style>
+      :root {
+        --background-color-light: #e3f2fd;
+        --background-color-dark: #0d47a1;
+        --text-color-light: #0d47a1;
+        --text-color-dark: #bbdefb;
+        --accent-color: #42a5f5;
+        --font-family: "Open Sans", sans-serif;
+      }
+
+      html {
+        color-scheme: light dark;
+      }
+
+      body {
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+        font-family: var(--font-family);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: var(--background-color-dark);
+          color: var(--text-color-dark);
+        }
+      }
+
+      h1 {
+        font-size: 3em;
+        margin-bottom: 0.2em;
+      }
+
+      p {
+        font-size: 1.2em;
+        max-width: 600px;
+        text-align: center;
+        margin: 0 1em;
+      }
+
+      a.button {
+        display: inline-block;
+        margin-top: 1em;
+        padding: 0.8em 1.5em;
+        background-color: var(--accent-color);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+        transition: background-color 0.3s;
+      }
+
+      a.button:hover {
+        background-color: #64b5f6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Backend Two!</h1>
+    <p>
+      This is the second backend service. We're excited to have you here. Feel
+      free to explore!
+    </p>
+    <a href="#" class="button">Get Started</a>
+  </body>
+</html>
