@@ -111,6 +111,11 @@ The authentication service is implemented in **Go** and manages:
     - `409 Conflict`: User already exists.
     - `400 Bad Request`: Invalid input.
     - `500 Internal Server Error`: Registration failed.
+    Example:
+
+```
+curl -X POST http://localhost:3000/register -H "Content-Type: application/json" -d '{"email":"user@example.com", "password":"user_password"}'
+ ```
 
 #### 2. User Login
 - **Endpoint**: `POST /login`
@@ -127,6 +132,12 @@ The authentication service is implemented in **Go** and manages:
     - `401 Unauthorized`: Invalid credentials.
     - `400 Bad Request`: Input validation failed.
 
+    Example:
+```
+curl -X POST http://localhost:3000/login -H "Content-Type: application/json" -d '{"email":"user@example.com", "password":"user_password"}'
+```
+
+
 #### 3. Validate an Access Token
 - **Endpoint**: `GET /validate`
 - **Description**: Checks if an access token is valid.
@@ -137,6 +148,11 @@ The authentication service is implemented in **Go** and manages:
 - **Response**:
     - `200 OK`: Token is valid.
     - `401 Unauthorized`: Invalid or expired token.
+
+    Example:
+```
+curl -X GET http://localhost:3000/validate -H "Authorization: Bearer <access_token>"
+```
 
 #### 4. Refresh an Access Token
 - **Endpoint**: `POST /refresh`
@@ -149,6 +165,11 @@ The authentication service is implemented in **Go** and manages:
     - `200 OK`: A new access token is issued.
     - `401 Unauthorized`: Invalid or expired refresh token.
     - `500 Internal Server Error`: Error during token refresh.
+
+    Example:
+ ```
+curl -X POST http://localhost:3000/refresh --cookie "refresh_token=<refresh_token>"
+```
 
 ---
 
